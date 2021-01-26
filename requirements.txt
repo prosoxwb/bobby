@@ -1,0 +1,17 @@
+rsa==4.7
+thrift==0.11.0
+requests==2.25.1
+bs4==0.0.1
+gtts==2.2.1
+beautifulsoup==3.2.2
+humanfriendly==9.1
+goslate==1.5.1
+wikipedia==1.4.0
+youtube_dl==2021.1.24.1
+tweepy==3.10.0
+pytz==2020.5
+html5lib==1.1
+pafy==0.5.5
+timeago==1.0.15
+livejson==1.9.1
+humanize==3.2.0
