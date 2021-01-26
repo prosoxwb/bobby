@@ -1,1 +1,1 @@
-web: python sb.py
+worker: python sb.py
