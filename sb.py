@@ -288,7 +288,7 @@ def help():
              "├➢ " + key + "kick" + "\n" + \
              "├➢ " + key + "spam" + "\n" + \
              "├➢ " + key + "setting" + "\n" + \
-             "╰───「 Bobby Selfbot 」"
+             "╰───「 Selfbot 」"
     return help
 def special():
     if settings['setKey']['status'] == True:
@@ -314,7 +314,7 @@ def special():
                     "├➢ " + key + "check mention" + "\n" + \
                     "├➢ " + key + "clear mention" + "\n" + \
                     "├➢ " + key + "mentionall" + "\n" + \
-                    "╰───「 Bobby Selfbot 」"
+                    "╰───「 Selfbot 」"
     return helpGroup
 def helpsettings():
     if settings['setKey']['status'] == True:
@@ -332,7 +332,7 @@ def helpsettings():
                     "├➢ " + key + "checkSticker「On/Off」" + "\n" + \
                     "├➢ " + key + "resendchat「On/Off」" + "\n" + \
                     "├➢ " + key + "sider「On/Off」" + "\n" + \
-                    "╰───「 Bobby Selfbot 」"
+                    "╰───「 Selfbot 」"
     return helpSettings
 def parsingRes(res):
     result = ''
@@ -361,7 +361,7 @@ def mentionMembers(to, mids=[]):
             elen = len(result) + 3
             mentionees.append({'S': str(slen), 'E': str(elen - 4), 'M': mid})
             if mid == mids[-1]:
-                result += '╰───[ Bobby Selfbot ]\n'
+                result += '╰───[ Selfbot ]\n'
         if result:
             if result.endswith('\n'): result = result[:-1]
             line.sendMessage(to, result, {'MENTION': json.dumps({'MENTIONEES': mentionees})}, 0)
@@ -382,7 +382,7 @@ def mentionMembers2(gid, mids=[]):
             elen = len(result) + 3
             mentionees.append({'S': str(slen), 'E': str(elen - 4), 'M': mid})
             if mid == mids[-1]:
-                result += '╰───[ Bobby Selfbot ]\n'
+                result += '╰───[ Selfbot ]\n'
         if result:
             if result.endswith('\n'): result = result[:-1]
             line.sendMessage(gid, result, {'MENTION': json.dumps({'MENTIONEES': mentionees})}, 0)
@@ -491,7 +491,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     ret += "\n├➢ {key}Rkick「 Mention 」"
                     ret += "\n├➢ {key}Mkick「 Mention 」"
                     ret += "\n├➢ {key}Xkick「 Reply 」"
-                    ret += "\n╰───「 Bobby Selfbot 」"
+                    ret += "\n╰───「 Selfbot 」"
                     sendFooter(to,parsingRes(ret).format_map(SafeDict(key=setKey.title())))
     elif cmd == 'bl':
                     ret = "╭───「 Help Blacklist 」"
@@ -502,7 +502,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     ret += "\n├➢ {key}debl「 Mention 」"
                     ret += "\n├➢ {key}bl:「 On/Off 」"
                     ret += "\n├➢ {key}unbl「 Num 」"
-                    ret += "\n╰───「 Bobby Selfbot 」"
+                    ret += "\n╰───「 Selfbot 」"
                     sendFooter(to,parsingRes(ret).format_map(SafeDict(key=setKey.title())))
     elif cmd == 'wl':
                     ret = "╭───「 Help Whitelist 」"
@@ -513,7 +513,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     ret += "\n├➢ {key}dewl「 Mention 」"
                     ret += "\n├➢ {key}wl:「 On/Off 」"
                     ret += "\n├➢ {key}unwl「 Num 」"
-                    ret += "\n╰───「 Bobby Selfbot 」"
+                    ret += "\n╰───「 Selfbot 」"
                     sendFooter(to,parsingRes(ret).format_map(SafeDict(key=setKey.title())))
     elif cmd == 'remote':
                     ret = "╭───「 Help Remote 」"
@@ -524,7 +524,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     ret += "\n├➢ mentionall 「 Num 」"
                     ret += "\n├➢ unsend 「 Num 」「 Numb 」"
                     ret += "\n├➢ spamcall 「 Num 」「 Numb 」"
-                    ret += "\n╰───「 Bobby Selfbot 」"
+                    ret += "\n╰───「 Selfbot 」"
                     sendFooter(to,ret)
     elif cmd == 'spam':
                     ret = "╭───「 Help Spam 」"
@@ -532,7 +532,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     ret += "\n├➢ {key}Spamcallto「Num」「Mention」"
                     ret += "\n├➢ {key}Spamtag「Num」「Mention」"
                     ret += "\n├➢ {key}Spamtext「Num」「Text」"
-                    ret += "\n╰───「 Bobby Selfbot 」"
+                    ret += "\n╰───「 Selfbot 」"
                     sendFooter(to,parsingRes(ret).format_map(SafeDict(key=setKey.title())))
 #================BATAS================
     elif cmd == 'speed':
@@ -568,7 +568,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         ret_ += "\n├➢ Invite: {}".format(sil)
         ret_ += "\n├➢ Cancel: {}".format(sil2)
         ret_ += "\n├➢ Add: {}".format(sil3)
-        ret_ += "\n╰───[ Bobby Selfbot ]"
+        ret_ += "\n╰───[ Selfbot ]"
         sendFooter(to,ret_)
     elif cmd == "byeme":
         text = "See You Again"
@@ -588,7 +588,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             res += "\n├➢ Cpu Core : {}".format(core)
             res += "\n├➢ Total Memory: {}".format(mem)
             res += "\n├➢ Free Memory: {}".format(fr)
-            res += '\n╰───[ Bobby Selfbot ]'
+            res += '\n╰───[ Selfbot ]'
             sendFooter(to,res)
     elif cmd == "clears":
             a = os.popen('echo 1 | sudo tee /proc/sys/vm/drop_caches\necho 2 | sudo tee /proc/sys/vm/drop_caches\necho 3 | sudo tee /proc/sys/vm/drop_caches\n').read()
@@ -666,7 +666,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
 								msgas = dd
 								for a in h[aa*20:(aa+1)*20]:
 									no+=1
-									if no == len(h):msgas+='\n├➢ {}. @!\n╰───[ Bobby Selfbot ]'.format(no)
+									if no == len(h):msgas+='\n├➢ {}. @!\n╰───[ Selfbot ]'.format(no)
 									else:msgas += '\n├➢ {}. @!'.format(no)
 								sendMention(to, msgas, h[aa*20:(aa+1)*20])
 						else:
@@ -681,7 +681,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
 								msgas = dd
 								for a in h[aa*20:(aa+1)*20]:
 									no+=1
-									if no == len(h):msgas+='\n├➢ {}. @!\n╰───[ Bobby Selfbot ]'.format(no)
+									if no == len(h):msgas+='\n├➢ {}. @!\n╰───[ Selfbot ]'.format(no)
 									else:msgas += '\n├➢ {}. @!'.format(no)
 								sendMention(to, msgas, h[aa*20:(aa+1)*20])
 						else:
@@ -745,7 +745,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                                     msgas = dd
                                     for a in h[aa*20:(aa+1)*20]:
                                         no+=1
-                                        if no == len(h):msgas+='\n├➢ {}. @!\n│• Blacklist Detect!!\n│• Be CareFull\n╰───[ Bobby Selfbot ]'.format(no)
+                                        if no == len(h):msgas+='\n├➢ {}. @!\n│• Blacklist Detect!!\n│• Be CareFull\n╰───[ Selfbot ]'.format(no)
                                         else:msgas += '\n├➢ {}. @!'.format(no)
                                     sendMention(to, msgas, h[aa*20:(aa+1)*20])
 #================Protection================
@@ -772,7 +772,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                                 ret_ += "\n┣━━「 Symbol Details 」"
                                 ret_ += "\n┣「🔒」: On/True/Enabled"
                                 ret_ += "\n┣「🔓」: Off/False/Disabled"
-                                ret_ += "\n┗━━━「 Bobby Selfbot 」"
+                                ret_ += "\n┗━━━「 Selfbot 」"
                                 sendFooter(to,parsingRes(ret_).format_map(SafeDict(key=setKey.title())))
     elif cmd == 'clear lock:join':
 						if len(settings["protectjoin"]) > 0:
@@ -840,7 +840,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                                     f = f + 1
                                     end = '\n'
                                     mf += str(f) + ". " +line.getGroup(group).name + "\n"
-                                sendFooter(to,"• Protectlist •\n\n- QR Protection :\n"+ma+"\n- Lock Kick :\n"+mb+"\n- Lock Join :\n"+md+"\n- Deny Invitation :\n"+me+"\n- Lock Cancel :\n"+mf+"\nTotal「%s」Protect Group\n\nBobby Selfbot" % (str(len(settings["protectqr"])+len(settings["protectkick"])+len(settings["protectjoin"])+len(settings["protectinvite"])+len(settings["protectcancel"]))))
+                                sendFooter(to,"• Protectlist •\n\n- QR Protection :\n"+ma+"\n- Lock Kick :\n"+mb+"\n- Lock Join :\n"+md+"\n- Deny Invitation :\n"+me+"\n- Lock Cancel :\n"+mf+"\nTotal「%s」Protect Group\n\nB Selfbot" % (str(len(settings["protectqr"])+len(settings["protectkick"])+len(settings["protectjoin"])+len(settings["protectinvite"])+len(settings["protectcancel"]))))
     elif cmd.startswith("lock:kick "):
                             spl = cmd.replace("lock:kick ","")
                             if spl == 'on':
@@ -991,8 +991,8 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n├➢ Type : Selfbot'
         res += '\n├➢ Version : 4.5.0'
         res += '\n├➢ Library : linepy (Python)'
-        res += '\n├➢ Creator : Bobby'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n├➢ Creator : mal'
+        res += '\n╰───[ Selfbot ]'
         sendFooter(to, res)
     elif cmd == 'status':
         res = '╭───[ Status ]'
@@ -1010,7 +1010,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n├➢ Check Contact : ' + bool_dict[settings['checkContact']][1]
         res += '\n├➢ Check Post : ' + bool_dict[settings['checkPost']][1]
         res += '\n├➢ Check Sticker : ' + bool_dict[settings['checkSticker']][1]
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         sendFooter(to, parsingRes(res))
     elif cmd == 'abort':
         aborted = False
@@ -1054,7 +1054,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}Error Logs'
         res += '\n│ • {key}Error Reset'
         res += '\n│ • {key}Error Detail <errid>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'error':
             sendFooter(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
         elif cond[0].lower() == 'logs':
@@ -1075,7 +1075,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     no += 1
                     res += '\n│ %i. %s' % (no, error)
                     if error == errors[-1]:
-                        res += '\n╰───[ Bobby Selfbot ]'
+                        res += '\n╰───[ Selfbot ]'
                 if res:
                     if res.startswith('\n'): res = res[1:]
                     sendFooter(to, res)
@@ -1108,7 +1108,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • Setkey'
         res += '\n│ • Setkey <on/off>'
         res += '\n│ • Setkey <key>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if txt == 'setkey':
             sendFooter(to, parsingRes(res))
         elif texttl == 'on':
@@ -1145,7 +1145,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}AutoAdd <on/off>'
         res += '\n│ • {key}AutoAdd Reply <on/off>'
         res += '\n│ • {key}AutoAdd <message>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'autoadd':
             sendFooter(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
         elif texttl == 'on':
@@ -1194,7 +1194,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}AutoJoin Ticket <on/off>'
         res += '\n│ • {key}AutoJoin Reply <on/off>'
         res += '\n│ • {key}AutoJoin <message>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'autojoin':
             sendFooter(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
         elif texttl == 'on':
@@ -1256,7 +1256,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}AutoRespondMention'
         res += '\n│ • {key}AutoRespondMention <on/off>'
         res += '\n│ • {key}AutoRespondMention <message>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'autorespondmention':
             sendFooter(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
         elif texttl == 'on':
@@ -1284,7 +1284,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}AutoRespond'
         res += '\n│ • {key}AutoRespond <on/off>'
         res += '\n│ • {key}AutoRespond <message>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'autorespond':
             sendFooter(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
         elif texttl == 'on':
@@ -1381,7 +1381,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}MyProfile Change Bio <bio>'
         res += '\n│ • {key}MyProfile Change Pict'
         res += '\n│ • {key}MyProfile Change Cover'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'myprofile':
             if profile.pictureStatus:
                 line.sendImageWithURL(to, 'http://dl.profile.line-cdn.net/' + profile.pictureStatus)
@@ -1460,7 +1460,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}Profile Steal Bio <mention>'
         res += '\n│ • {key}Profile Steal Pict <mention>'
         res += '\n│ • {key}Profile Steal Cover <mention>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'profile':
             if profile:
                 if profile.pictureStatus:
@@ -1507,7 +1507,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                         res += '\n├➢ Display Name : ' + str(profile.displayName)
                         if profile.displayNameOverridden: res += '\n├➢ Display Name Overridden : ' + str(profile.displayNameOverridden)
                         res += '\n├➢ Status Message : ' + str(profile.statusMessage)
-                        res += '\n╰───[ Bobby Selfbot ]'
+                        res += '\n╰───[ Selfbot ]'
                         sendFooter(to, parsingRes(res))
                 else:
                     sendFooter(to, 'Failed steal profile, no one user mentioned')
@@ -1523,7 +1523,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                         mid = mention['M']
                         no += 1
                         res += '\n│ %i. %s' % (no, mid)
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
                     sendFooter(to, parsingRes(res))
                 else:
                     sendFooter(to, 'Failed steal mid, no one user mentioned')
@@ -1540,7 +1540,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                         profile = line.getContact(mid)
                         no += 1
                         res += '\n│ %i. %s' % (no, profile.displayName)
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
                     sendFooter(to, parsingRes(res))
                 else:
                     sendFooter(to, 'Failed steal display name, no one user mentioned')
@@ -1557,7 +1557,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                         profile = line.getContact(mid)
                         no += 1
                         res += '\n│ %i. %s' % (no, profile.statusMessage)
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
                     sendFooter(to, parsingRes(res))
                 else:
                     sendFooter(to, 'Failed steal status message, no one user mentioned')
@@ -1584,7 +1584,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                             res += '\n│ %i. %s' % (no, path)
                         else:
                             res += '\n│ %i. Not Found' % no
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
                     sendFooter(to, parsingRes(res))
                 else:
                     sendFooter(to, 'Failed steal picture status, no one user mentioned')
@@ -1604,7 +1604,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                         cover = line.getProfileCoverURL(mid)
                         line.sendImageWithURL(to, str(cover))
                         res += '\n│ %i. %s' % (no, cover)
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
                     sendFooter(to, parsingRes(res))
                 else:
                     sendFooter(to, 'Failed steal cover picture, no one user mentioned')
@@ -1637,7 +1637,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}Mimic Reset'
         res += '\n│ • {key}Mimic Add <mention>'
         res += '\n│ • {key}Mimic Del <mention>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'mimic':
             sendFooter(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
         elif texttl == 'on':
@@ -1672,7 +1672,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                         name = 'Unknown'
                     res += '\n│ %i. %s' % (no, name)
                 if no == 0: res += '\n│ Nothing'
-                res += '\n╰───[ Bobby Selfbot ]'
+                res += '\n╰───[ Selfbot ]'
                 sendFooter(to, res)
             else:
                 sendFooter(to, 'Failed add mimic target, no one user mentioned')
@@ -1694,7 +1694,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                         name = 'Unknown'
                     res += '\n│ %i. %s' % (no, name)
                 if no == 0: res += '\n│ Nothing'
-                res += '\n╰───[ Bobby Selfbot ]'
+                res += '\n╰───[ Selfbot ]'
                 sendFooter(to, res)
             else:
                 sendFooter(to, 'Failed del mimic target, no one user mentioned')
@@ -1712,7 +1712,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n├➢ Usage : '
         res += '\n│ • {key}Broadcast'
         res += '\n│ • {key}Broadcast <type> <message>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'broadcast':
             sendFooter(to, parsingRes(res).format(key=setKey.title()))
         elif cond[0] == '1':
@@ -1824,7 +1824,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}FriendList Info <num/name>'
         res += '\n│ • {key}FriendList Add <mention>'
         res += '\n│ • {key}FriendList Del <mention/num/name/all>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         ress.append(res)
         if cmd == 'friendlist':
             for res in ress:
@@ -1851,7 +1851,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     res += '\n├➢ Display Name : ' + str(contact.displayName)
                     if contact.displayNameOverridden: res += '\n├➢ Display Name Overridden : ' + str(contact.displayNameOverridden)
                     res += '\n├➢ Status Message : ' + str(contact.statusMessage)
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
                     sendFooter(to, parsingRes(res))
                 elif name != None:
                     if name in cnames:
@@ -1865,7 +1865,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                         res += '\n├➢ Display Name : ' + str(contact.displayName)
                         if contact.displayNameOverridden: res += '\n├➢ Display Name Overridden : ' + str(contact.displayNameOverridden)
                         res += '\n├➢ Status Message : ' + str(contact.statusMessage)
-                        res += '\n╰───[ Bobby Selfbot ]'
+                        res += '\n╰───[ Selfbot ]'
                         sendFooter(to, parsingRes(res))
         elif texttl.startswith('add '):
             res = '╭───[ Friend List ]'
@@ -1888,7 +1888,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     res += '\n│ %i. %s' % (no, name)
                     added.append(mid)
                 if no == 0: res += '\n│ Nothing'
-                res += '\n╰───[ Bobby Selfbot ]'
+                res += '\n╰───[ Selfbot ]'
                 sendFooter(to, res)
             else:
                 sendFooter(to, 'Failed add contact to friend list, no one user mentioned')
@@ -1963,7 +1963,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     else:
                         sendFooter(to, 'Failed del friend with name `%s`, name not in list ♪' % name)
             if no == 0: res += '\n│ Nothing'
-            res += '\n╰───[ Bobby Selfbot ]'
+            res += '\n╰───[ Selfbot ]'
             sendFooter(to, res)
         else:
             for res in ress:
@@ -2017,7 +2017,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}BlockList Info <num/name>'
         res += '\n│ • {key}BlockList Add <mention>'
         res += '\n│ • {key}BlockList Del <mention/num/name/all>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         ress.append(res)
         if cmd == 'blocklist':
             for res in ress:
@@ -2044,7 +2044,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     res += '\n├➢ Display Name : ' + str(contact.displayName)
                     if contact.displayNameOverridden: res += '\n├➢ Display Name Overridden : ' + str(contact.displayNameOverridden)
                     res += '\n├➢ Status Message : ' + str(contact.statusMessage)
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
                     sendFooter(to, parsingRes(res))
                 elif name != None:
                     if name in cnames:
@@ -2058,7 +2058,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                         res += '\n├➢ Display Name : ' + str(contact.displayName)
                         if contact.displayNameOverridden: res += '\n├➢ Display Name Overridden : ' + str(contact.displayNameOverridden)
                         res += '\n├➢ Status Message : ' + str(contact.statusMessage)
-                        res += '\n╰───[ Bobby Selfbot ]'
+                        res += '\n╰───[ Selfbot ]'
                         sendFooter(to, parsingRes(res))
         elif texttl.startswith('add '):
             res = '╭───[ Block List ]'
@@ -2081,7 +2081,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     res += '\n│ %i. %s' % (no, name)
                     added.append(mid)
                 if no == 0: res += '\n│ Nothing'
-                res += '\n╰───[ Bobby Selfbot ]'
+                res += '\n╰───[ Selfbot ]'
                 sendFooter(to, res)
             else:
                 sendFooter(to, 'Failed block contact, no one user mentioned')
@@ -2156,7 +2156,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     else:
                         sendFooter(to, 'Failed unblock user with name `%s`, name not in list ♪' % name)
             if no == 0: res += '\n│ Nothing'
-            res += '\n╰───[ Bobby Selfbot ]'
+            res += '\n╰───[ Selfbot ]'
             sendFooter(to, res)
         else:
             for res in ress:
@@ -2255,7 +2255,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n├ • Pending Count : ' + str(pendings)
         res += '\n├ • QR Status : ' + qr
         res += '\n├ • Ticket : ' + ticket
-        res += '\n╰───「 Bobby Selfbot 」'
+        res += '\n╰───「 Selfbot 」'
         line.sendReplyImageWithURL(msg_id, to, path)
         if ccreator:
             line.sendReplyMessage(msg_id, to, None, contentMetadata={'mid': ccreator}, contentType=13)
@@ -2289,7 +2289,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n├➢ Pending Count : ' + str(pendings)
         res += '\n├➢ QR Status : ' + qr
         res += '\n├➢ Ticket : ' + ticket
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         line.sendImageWithURL(to, path)
         if ccreator:
             line.sendContact(to, ccreator)
@@ -2328,7 +2328,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n├➢ Usage : '
         res += '\n│ • {key}GroupList'
         res += '\n│ • {key}GroupList Leave <num/name/all>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         ress.append(res)
         if cmd == 'grouplist':
             for res in ress:
@@ -2416,7 +2416,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}InvitationList'
         res += '\n│ • {key}InvitationList Accept <num/name/all>'
         res += '\n│ • {key}InvitationList Reject <num/name/all>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         ress.append(res)
         if cmd == 'invitationlist':
             for res in ress:
@@ -2527,7 +2527,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                 no += 1
                 res += '\n│ %i. %s' % (no, member.displayName)
                 if member == members[-1]:
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
             if res:
                 if res.startswith('\n'): res = res[1:]
                 sendFooter(to, res)
@@ -2546,7 +2546,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                 no += 1
                 res += '\n│ %i. %s' % (no, member.displayName)
                 if member == members[-1]:
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
             if res:
                 if res.startswith('\n'): res = res[1:]
                 sendFooter(to, res)
@@ -2668,7 +2668,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}Lurk Reset'
         res += '\n│ • {key}Lurk ReplyReader <on/off>'
         res += '\n│ • {key}Lurk ReplyReader <message>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'lurk':
             sendFooter(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
         elif msg.toType not in [1, 2]:
@@ -2716,7 +2716,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                             if member == members[-1]:
                                 res += '\n│'
                                 res += '\n├➢ Time Set : ' + lurking[to]['time']
-                                res += '\n╰───[ Bobby Selfbot ]'
+                                res += '\n╰───[ Selfbot ]'
                         if res:
                             if res.startswith('\n'): res = res[1:]
                             sendFooter(to, res)
@@ -2764,7 +2764,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n│ • {key}Greet Join <message>'
         res += '\n│ • {key}Greet Leave <on/off>'
         res += '\n│ • {key}Greet Leave <message>'
-        res += '\n╰───[ Bobby Selfbot ]'
+        res += '\n╰───[ Selfbot ]'
         if cmd == 'greet':
             sendFooter(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
         elif texttl.startswith('join '):
@@ -3273,14 +3273,14 @@ def executeOp(op):
                 res += "\n├➢ Victim : {}".format(contact.displayName)
                 res += "\n├➢ Kicker: {}".format(kiker.displayName)
                 res += "\n├ 👇Contact Kicker👇"
-                res += "\n╰───[ Bobby Selfbot ]"
+                res += "\n╰───[ Selfbot ]"
                 data = {
                                            "type": "text",
                                            "text": "{}".format(str(res)),
                                            "sentBy": {
                                            "label": "{}".format(line.getContact(myMid).displayName),
                                            "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(myMid).pictureStatus),
-                                           "linkUrl": "https://line.me/ti/p/~imbobby_",
+                                           "linkUrl": "https://line.me/ti/p/~malmlzka",
                                          }
                                      }
                 sendTemplate(group, data)
@@ -3436,7 +3436,7 @@ def executeOp(op):
                     res += '\n├➢ Sticker Packages ID : ' + msg.contentMetadata['STKPKGID']
                     res += '\n├➢ Sticker Version : ' + msg.contentMetadata['STKVER']
                     res += '\n├➢ Sticker Link : line://shop/detail/' + msg.contentMetadata['STKPKGID']
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
                     sendFooter(to, parsingRes(res))
             elif msg.contentType == 13: # Content type is contact
                 if settings['checkContact']:
@@ -3450,7 +3450,7 @@ def executeOp(op):
                     res += '\n├➢ Display Name : ' + str(contact.displayName)
                     if contact.displayNameOverridden: res += '\n├ Display Name Overridden : ' + str(contact.displayNameOverridden)
                     res += '\n├➢ Status Message : ' + str(contact.statusMessage)
-                    res += '\n╰───[ Bobby Selfbot ]'
+                    res += '\n╰───[ Selfbot ]'
                     if contact.pictureStatus:
                         line.sendImageWithURL(to, 'http://dl.profile.line-cdn.net/' + contact.pictureStatus)
                     cover = line.getProfileCoverURL(mid)
@@ -3499,7 +3499,7 @@ def executeOp(op):
                         res = '╭───[ Details Post ]'
                         res += '\n├➢ Creator : ' + author
                         res += '\n├➢ Post Link : ' + posturl
-                        res += '\n╰───[ Bobby Selfbot ]'
+                        res += '\n╰───[ Selfbot ]'
         elif op.type == 26:
             msg      = op.message
             text     = str(msg.text)
@@ -3733,15 +3733,15 @@ def executeOp(op):
                                 if " " in Name:
                                     nick = Name.split(' ')
                                     if len(nick) == 2:
-                                        line.sendMessageMusic(op.param1, kontak.displayName, 'betah banget jadi sider 😑', 'line.me/ti/p/~imbobby_', "https://obs.line-apps.com/os/p/{}".format(str(kontak.mid)))
+                                        line.sendMessageMusic(op.param1, kontak.displayName, 'betah banget jadi sider 😑', 'line.me/ti/p/~malmlzka', "https://obs.line-apps.com/os/p/{}".format(str(kontak.mid)))
                                         #sendMention(op.param1, "Kak @! jelek, sider mulu",[op.param2])
                                         #line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net" + line.getContact(op.param2).picturePath)
                                     else:
-                                        line.sendMessageMusic(op.param1, kontak.displayName, 'sider mulu jomblo ya (｡-_-｡)', 'line.me/ti/p/~imbobby_', "https://obs.line-apps.com/os/p/{}".format(str(kontak.mid)))
+                                        line.sendMessageMusic(op.param1, kontak.displayName, 'sider mulu jomblo ya (｡-_-｡)', 'line.me/ti/p/~malmlzka', "https://obs.line-apps.com/os/p/{}".format(str(kontak.mid)))
                                         #sendMention(op.param1, "Kak @! sider mulu, jomblo ya ka?",[op.param2])
                                         #line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net" + line.getContact(op.param2).picturePath)
                                 else:
-                                    line.sendMessageMusic(op.param1, kontak.displayName, 'cie ketahuan sider ( ͡° ͜ʖ ͡°)', 'line.me/ti/p/~imbobby_', "https://obs.line-apps.com/os/p/{}".format(str(kontak.mid)))
+                                    line.sendMessageMusic(op.param1, kontak.displayName, 'cie ketahuan sider ( ͡° ͜ʖ ͡°)', 'line.me/ti/p/~malmlzka', "https://obs.line-apps.com/os/p/{}".format(str(kontak.mid)))
                                     #sendMention(op.param1, "Kak @! Jangan Sider dong",[op.param2])
                                     #line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net" + line.getContact(op.param2).picturePath)
                     else:
