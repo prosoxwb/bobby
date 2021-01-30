@@ -544,7 +544,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         runtime = time.time() - programStart
         sendFooter(to, 'Bot already running on ' + format_timespan(runtime))
     elif cmd == 'creator':
-        line.sendContact(to, 'u337c18ad01bdc582a952bbabe1832644')
+        line.sendContact(to, 'u9be8862cb884bde356d0e41fb6850514')
     elif cmd == 'cekbot':
         try:line.inviteIntoGroup(to, ["u45882d0ead1703855dbc60d40e37bec7"]);has = "OK"
         except:has = "NOT"
@@ -3137,7 +3137,6 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
     elif cmd == "gift":
                                 line.generateReplyMessage(msg.id)
                                 line.sendReplyMessage(msg.id, to, text=None, contentMetadata={'PRDID': '350d37d6-bfc9-44cb-a0d1-cf17ae3657db','PRDTYPE': 'THEME','MSGTPL': '5'}, contentType=9)   
-                                sendFooter(to, "for you")
 def executeOp(op):
     try:
         print ('++ Operation : ( %i ) %s' % (op.type, OpType._VALUES_TO_NAMES[op.type].replace('_', ' ')))
@@ -3291,7 +3290,6 @@ def executeOp(op):
                         line.findAndAddContactsByMid(op.param3)
                         line.kickoutFromGroup(op.param1,[op.param2])
                         line.inviteIntoGroup(op.param1,[op.param3])
-                        sendFooter(op.param1,"Don't Kick My Whitelist !!")
                     except:pass
           if op.param1 in settings["protectkick"]:
                 if op.param2 not in settings["whitelist"]:
@@ -3306,7 +3304,6 @@ def executeOp(op):
                         line.findAndAddContactsByMid(op.param3)
                         line.kickoutFromGroup(op.param1,[op.param2])
                         line.inviteIntoGroup(op.param1,[op.param3])
-                        sendFooter(op.param1,"Don't Cancel My Whitelist !!")
                     except:pass
           if op.param1 in settings["protectcancel"]:
                 if op.param2 not in settings["whitelist"]:
