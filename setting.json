@@ -5,22 +5,22 @@
         "reply": true
     },
     "autoJoin": {
-        "status": false,
+        "status": true,
         "message": "Thnks udh Invite @!",
         "reply": false,
-        "ticket": false
+        "ticket": true
     },
     "members": 500,
     "groupjoin": 150,
     "namegrup": "lpm",
-    "autoRead": false,
+    "autoRead": true,
     "autoRespond": {
-        "status": false,
+        "status": true,
         "message": "hello @!"
     },
     "autoRespondMention": {
-        "status": false,
-        "message": "already deactive"
+        "status": true,
+        "message": "paan @!"
     },
     "Addimage": false,
     "runtime": 1584023403.734488,
