@@ -16,11 +16,11 @@
     "autoRead": true,
     "autoRespond": {
         "status": true,
-        "message": "hello @!"
+        "message": "aloo @!"
     },
     "autoRespondMention": {
         "status": true,
-        "message": "paan @!"
+        "message": "apaa @!"
     },
     "Addimage": false,
     "runtime": 1584023403.734488,
