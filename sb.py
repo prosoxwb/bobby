@@ -840,7 +840,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                                     f = f + 1
                                     end = '\n'
                                     mf += str(f) + ". " +line.getGroup(group).name + "\n"
-                                sendFooter(to,"• Protectlist •\n\n- QR Protection :\n"+ma+"\n- Lock Kick :\n"+mb+"\n- Lock Join :\n"+md+"\n- Deny Invitation :\n"+me+"\n- Lock Cancel :\n"+mf+"\nTotal「%s」Protect Group\n\nB Selfbot" % (str(len(settings["protectqr"])+len(settings["protectkick"])+len(settings["protectjoin"])+len(settings["protectinvite"])+len(settings["protectcancel"]))))
+                                sendFooter(to,"• Protectlist •\n\n- QR Protection :\n"+ma+"\n- Lock Kick :\n"+mb+"\n- Lock Join :\n"+md+"\n- Deny Invitation :\n"+me+"\n- Lock Cancel :\n"+mf+"\nTotal「%s」Protect Group\n\nSelfbot" % (str(len(settings["protectqr"])+len(settings["protectkick"])+len(settings["protectjoin"])+len(settings["protectinvite"])+len(settings["protectcancel"]))))
     elif cmd.startswith("lock:kick "):
                             spl = cmd.replace("lock:kick ","")
                             if spl == 'on':
