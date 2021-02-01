@@ -3380,7 +3380,6 @@ def executeOp(op):
                         except:
                             continue
                         if group.id in gids:
-                            sendFooter(to, 'I\'m already on group ' + group.name)
                             continue
                         line.acceptGroupInvitationByTicket(group.id, ticket)
                         if settings['autoJoin']['reply']:
@@ -3388,7 +3387,6 @@ def executeOp(op):
                                 sendFooter(to, settings['autoJoin']['message'])
                             else:
                                 line.sendMentionV2(to, settings['autoJoin']['message'], [sender])
-                        sendFooter(to, 'Success join to group ' + group.name)
                 try:
                     executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey)
                 except TalkException as talk_error:
@@ -3557,7 +3555,6 @@ def executeOp(op):
                         except:
                             continue
                         if group.id in gids:
-                            sendFooter(to, 'I\'m already on group ' + group.name)
                             continue
                         line.acceptGroupInvitationByTicket(group.id, ticket)
                         if settings['autoJoin']['reply']:
@@ -3565,7 +3562,6 @@ def executeOp(op):
                                 sendFooter(to, settings['autoJoin']['message'])
                             else:
                                 line.sendMentionV2(to, settings['autoJoin']['message'], [sender])
-                        sendFooter(to, 'Success join to group ' + group.name)
                 if settings['mimic']['status']:
                     if sender in settings['mimic']['target'] and settings['mimic']['target'][sender]:
                         try:
