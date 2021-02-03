@@ -39,7 +39,7 @@ parser.add_argument('-T', '--traceback', type=str2bool, nargs='?', default=False
 parser.add_argument('-S', '--showqr', type=str2bool, nargs='?', default=False, metavar='', required=False, const=True, choices=[True, False], help='Show QR | Use : True/False')
 args = parser.parse_args()
 listAppType = ['DESKTOPWIN', 'DESKTOPMAC', 'IOSIPAD', 'CHROMEOS']
-line = LINE("rawido7439@200cai.com","rahmagila123") #Input Your Email and Password Here
+line = LINE("cagepiw117@nonicamy.com","rahmagila123") #Input Your Email and Password Here
 #=======================================================================================================================
 myMid = line.profile.mid
 programStart = time.time()
