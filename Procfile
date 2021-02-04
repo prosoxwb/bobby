@@ -1,1 +1,1 @@
-worker: python sb.py -s --CHROMEOS
+worker: python sb.py
