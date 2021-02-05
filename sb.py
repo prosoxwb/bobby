@@ -590,6 +590,50 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             res += "\n├➢ Free Memory: {}".format(fr)
             res += '\n╰───[ Selfbot ]'
             sendFooter(to,res)
+    elif cmd.startswith("cloneprofile "):
+        no = 0
+        if 'MENTION' in msg.contentMetadata.keys():
+            mentions = ast.literal_eval(msg.contentMetadata['MENTION'])
+            if len(mentions['MENTIONEES']) == 1:
+                mid = mentions['MENTIONEES'][0]['M']
+                contact = line.getContact(mid)
+                profile = line.getProfile()
+                profile.displayName, profile.statusMessage = contact.displayName, contact.statusMessage
+                line.updateProfile(profile)
+                if contact.pictureStatus:
+                    pict = line.downloadFileURL('http://dl.profile.line-cdn.net/' + contact.pictureStatus)
+                    line.updateProfilePicture(pict)
+                coverId = line.getProfileDetail(mid)['result']['objectId']
+                line.updateProfileCoverById(coverId)
+            for mention in mentions['MENTIONEES']:
+                mid = mention['M']
+                no += 1
+                contact = line.getContact(mid)
+                profile = line.getProfile()
+                profile.displayName, profile.statusMessage = contact.displayName, contact.statusMessage
+                line.updateProfile(profile)
+                if contact.pictureStatus:
+                    pict = line.downloadFileURL('http://dl.profile.line-cdn.net/' + contact.pictureStatus)
+                    line.updateProfilePicture(pict)
+                coverId = line.getProfileDetail(mid)['result']['objectId']
+                line.updateProfileCoverById(coverId)
+    elif cmd == "restoreprofile":
+        profile = line.getProfile()
+        profile.displayName = settings['myProfile']['displayName']
+        profile.statusMessage = settings['myProfile']['statusMessage']
+        line.updateProfile(profile)
+        if settings['myProfile']['pictureStatus']:
+            pict = line.downloadFileURL('http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'])
+            line.updateProfilePicture(pict)
+        coverId = settings['myProfile']['coverId']
+        line.updateProfileCoverById(coverId)
+    elif cmd == "backupprofile":
+        profile = line.getContact(myMid)
+        settings['myProfile']['displayName'] = profile.displayName
+        settings['myProfile']['pictureStatus'] = profile.pictureStatus
+        settings['myProfile']['statusMessage'] = profile.statusMessage
+        coverId = line.getProfileDetail()['result']['objectId']
+        settings['myProfile']['coverId'] = str(coverId)
     elif cmd == "clears":
             a = os.popen('echo 1 | sudo tee /proc/sys/vm/drop_caches\necho 2 | sudo tee /proc/sys/vm/drop_caches\necho 3 | sudo tee /proc/sys/vm/drop_caches\n').read()
             b = os.popen('cd / && cd tmp && rm *.bin').read()
