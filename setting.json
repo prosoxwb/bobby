@@ -2,7 +2,7 @@
     "autoAdd": {
         "status": true,
         "message": "Hayoooo ketauan nge Add @!",
-        "reply": true
+        "reply": false
     },
     "autoJoin": {
         "status": true,
@@ -19,7 +19,7 @@
         "message": "aloo @!"
     },
     "autoRespondMention": {
-        "status": true,
+        "status": false,
         "message": "apaa @!"
     },
     "Addimage": false,
