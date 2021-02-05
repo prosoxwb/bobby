@@ -2943,7 +2943,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             thread1.start()
             thread1.join()
         line.unsendMessage(msg.id)
-    elif txt.startswith('unsend '):
+    elif txt.startswith('runsend '):
         sep = text.split(" ")
         num = int(sep[1])
         numb = int(sep[2])
