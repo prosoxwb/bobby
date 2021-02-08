@@ -570,10 +570,10 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         ret_ += "\n├➢ Add: {}".format(sil3)
         ret_ += "\n╰───[ Selfbot ]"
         sendFooter(to,ret_)
-    elif cmd == 'gantinama':
-	line.sendMessage(to, "tunggu 1")
-	line.sendMessage(to, "tunggu 2")
-	line.sendMessage(to, "tunggu 3")
+    elif cmd == "gantinama":
+	line.sendMessage(to, "1")
+	line.sendMessage(to, "2")
+	line.sendMessage(to, "3")
         line.sendMessage(to, "MyProfile Change Name MᴘPᴜᴄʙʟɪᴄ♪")
         line.sendMessage(to, "gantilagi")
     elif cmd == "byeme":
