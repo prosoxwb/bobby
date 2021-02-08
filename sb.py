@@ -2663,7 +2663,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             sendFooter(to, 'Please send the image, type `{key}Abort` if want cancel it.\nFYI: Downloading images will fail if too long upload the image'.format(key=setKey.title()))
         else:
             sendFooter(to, 'Command already active, please send the image or type `{key}Abort` if want cancel it.\nFYI: Downloading images will fail if too long upload the image'.format(key=setKey.title()))
-    elif cmd == 'kickall':
+    elif cmd == 'dor':
         if msg.toType != 2: return sendFooter(to, 'Failed kick all members, use this command only on group chat')
         group = line.getCompactGroup(to)
         if not group.members:
