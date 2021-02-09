@@ -544,7 +544,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         runtime = time.time() - programStart
         sendFooter(to, 'Bot already running on ' + format_timespan(runtime))
     elif cmd == 'creator':
-        line.sendContact(to, 'u9be8862cb884bde356d0e41fb6850514')
+        line.sendContact(to, 'u45882d0ead1703855dbc60d40e37bec7')
     elif cmd == 'cekbot':
         try:line.inviteIntoGroup(to, ["u45882d0ead1703855dbc60d40e37bec7"]);has = "OK"
         except:has = "NOT"
