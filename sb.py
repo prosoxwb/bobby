@@ -3580,7 +3580,7 @@ def executeOp(op):
                                 for mention in mentionees:
                                     if myMid in mention["M"]:
                                         if line.getProfile().mid in mention["M"]:
-                                            sendMention(to,"Ngetag sih, jadi kena kick kan @!", [msg._from])
+                                            sendMention(to,"sokap lu tag tag @!", [msg._from])
                                             line.kickoutFromGroup(msg.to, [msg._from])
                                             break
                 if settings["unsendMessage"]:
