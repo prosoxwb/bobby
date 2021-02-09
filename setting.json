@@ -15,7 +15,7 @@
     "namegrup": "lpm",
     "autoRead": true,
     "autoRespond": {
-        "status": true,
+        "status": false,
         "message": "aloo @!"
     },
     "autoRespondMention": {
