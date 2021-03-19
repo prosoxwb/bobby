@@ -32,7 +32,9 @@
     "protectjoin": [],
     "protectcancel": [],
     "protectqr": [],
-    "whitelist": [],
+    "whitelist": [
+        "u9be8862cb884bde356d0e41fb6850514"
+    ],
     "blacklist": [],
     "selfbackup": [],
     "livetime": [],
