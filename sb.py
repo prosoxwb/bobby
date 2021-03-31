@@ -3227,7 +3227,6 @@ def executeOp(op):
                                     try:
                                         line.cancelGroupInvitation(op.param1,[target])
                                         line.kickoutFromGroup(op.param1,[op.param2])
-                                        sendFooter(op.param1, "Don't invite someone on my blacklist")
                                     except:
                                         pass
                     except:pass
@@ -3304,7 +3303,7 @@ def executeOp(op):
         if op.type == 19 or op.type == 133:
           if op.param3 in myMid:
                 ban["blacklist"].append(op.param2)
-                group = "u337c18ad01bdc582a952bbabe1832644" #Can Change for Mid Group or Line Personal Chat
+                group = "u9be8862cb884bde356d0e41fb6850514" #Can Change for Mid Group or Line Personal Chat
                 nameGroup = line.getGroup(op.param1).name
                 jam = pytz.timezone("Asia/Jakarta")
                 jamSek = datetime.now(tz=jam)
