@@ -95,7 +95,7 @@
     "detectTemplate": false,
     "unsendMessage": false,
     "detectspam": false,
-    "mentionkick": true,
+    "mentionkick": false,
     "getposttl": false,
     "responcall": false,
     "detectflex": false,
