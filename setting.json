@@ -33,7 +33,11 @@
     "protectcancel": [],
     "protectqr": [],
     "whitelist": [
-        "u9be8862cb884bde356d0e41fb6850514"
+        "u9be8862cb884bde356d0e41fb6850514",
+        "udb7582e5f87d1a69573921d0891a443c",
+        "u8a4f35f835cded2cdd48d063abceb9f6",
+        "u71399241a8e186e96dc686a994ab7db1",
+        "uc5dbb1052409ef592991e7a324c29251"
     ],
     "blacklist": [],
     "selfbackup": [],
