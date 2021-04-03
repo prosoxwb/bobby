@@ -271,7 +271,7 @@ def sendFooter(to, isi):
         "type": "text",
         "text": isi,
         "sentBy": {
-            "label": "We Bare Bears Corps™",
+            "label": "We Bare Bears Contol™",
             "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(myMid).pictureStatus),
             "linkUrl": settings["lable"] # DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
         }
