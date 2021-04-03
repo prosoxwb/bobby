@@ -594,6 +594,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             res += '\n╰───[ Selfbot ]'
             sendFooter(to,res)
     elif cmd.startswith("cloneprofile "):
+        line.unsendMessage(msg.id)
         no = 0
         if 'MENTION' in msg.contentMetadata.keys():
             mentions = ast.literal_eval(msg.contentMetadata['MENTION'])
