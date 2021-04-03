@@ -2675,6 +2675,8 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                 continue
             try:
                 line.kickoutFromGroup(to, [member.mid])
+                line.kickoutFromGroup(to, [member.mid])
+                line.kickoutFromGroup(to, [member.mid])
             except TalkException as talk_error:
                 return sendFooter(to, 'Failed kick all members, the reason is `%s`' % talk_error.reason)
             time.sleep(0.8)
