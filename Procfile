@@ -1,1 +1,1 @@
-worker: python sb1.py
+worker: python sb3.py
