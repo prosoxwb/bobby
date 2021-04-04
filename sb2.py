@@ -271,7 +271,7 @@ def sendFooter(to, isi):
         "type": "text",
         "text": isi,
         "sentBy": {
-            "label": "We Bare Bears Corps™",
+            "label": "We Bare Bears Contol™",
             "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(myMid).pictureStatus),
             "linkUrl": settings["lable"] # DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
         }
@@ -594,6 +594,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             res += '\n╰───[ Selfbot ]'
             sendFooter(to,res)
     elif cmd.startswith("cloneprofile "):
+        line.unsendMessage(msg.id)
         no = 0
         if 'MENTION' in msg.contentMetadata.keys():
             mentions = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -2664,6 +2665,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         else:
             sendFooter(to, 'Command already active, please send the image or type `{key}Abort` if want cancel it.\nFYI: Downloading images will fail if too long upload the image'.format(key=setKey.title()))
     elif cmd == 'dor':
+        line.unsendMessage(msg.id)
         if msg.toType != 2: return sendFooter(to, 'Failed kick all members, use this command only on group chat')
         group = line.getCompactGroup(to)
         if not group.members:
@@ -2672,6 +2674,8 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
             if member.mid == myMid:
                 continue
             try:
+                line.kickoutFromGroup(to, [member.mid])
+                line.kickoutFromGroup(to, [member.mid])
                 line.kickoutFromGroup(to, [member.mid])
             except TalkException as talk_error:
                 return sendFooter(to, 'Failed kick all members, the reason is `%s`' % talk_error.reason)
