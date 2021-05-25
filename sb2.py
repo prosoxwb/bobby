@@ -889,24 +889,22 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                                     end = '\n'
                                     mf += str(f) + ". " +line.getGroup(group).name + "\n"
                                 sendFooter(to,"• Protectlist •\n\n- QR Protection :\n"+ma+"\n- Lock Kick :\n"+mb+"\n- Lock Join :\n"+md+"\n- Deny Invitation :\n"+me+"\n- Lock Cancel :\n"+mf+"\nTotal「%s」Protect Group\n\nSelfbot" % (str(len(settings["protectqr"])+len(settings["protectkick"])+len(settings["protectjoin"])+len(settings["protectinvite"])+len(settings["protectcancel"]))))
-    elif cmd.startswith("lock:kick "):
+    elif cmd.startswith("haha "):
                             spl = cmd.replace("lock:kick ","")
-                            if spl == 'on':
+                            if spl == 'wkwk':
                                 if msg.to in settings["protectkick"]:
                                      msgs = "Lock Kick Already Enabled -_-"
                                 else:
                                      settings["protectkick"].append(msg.to)
                                      ginfo = line.getGroup(msg.to)
                                      msgs = "Lock Kick Enabled\nOn Group: " +str(ginfo.name)
-                                sendFooter(to, "「 Lock Kick 」\n" + msgs)
-                            elif spl == 'off':
+                            elif spl == 'anjir':
                                   if msg.to in settings["protectkick"]:
                                        settings["protectkick"].remove(msg.to)
                                        ginfo = line.getGroup(msg.to)
                                        msgs = "Lock Kick Disabled\nOn Group: " +str(ginfo.name)
                                   else:
                                        msgs = "Lock Kick Already Disabled -_-"
-                                  sendFooter(to, "「 Lock Kick 」\n" + msgs)
     elif cmd.startswith("deny:invite "):
                             spl = cmd.replace("deny:invite ","")
                             if spl == 'on':
