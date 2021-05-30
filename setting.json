@@ -33,11 +33,11 @@
     "protectcancel": [],
     "protectqr": [],
     "whitelist": [
+        "u890d7cb136b67f6e20f846b9f619dd9e",
         "u9be8862cb884bde356d0e41fb6850514",
-        "udb7582e5f87d1a69573921d0891a443c",
-        "u8a4f35f835cded2cdd48d063abceb9f6",
-        "u71399241a8e186e96dc686a994ab7db1",
-        "uc5dbb1052409ef592991e7a324c29251"
+        "u477366a4fad8286ccd5ddee2b5f02b63",
+        "u1e9c73223c83050279b5c9179b5b0fc5",
+        "ub781a80a354b340f74f5e8b88a45df01"
     ],
     "blacklist": [],
     "selfbackup": [],
