@@ -27,7 +27,9 @@
     "receivercount": 3827731,
     "sendcount": 1991738,
     "silent": [],
-    "protectkick": [],
+    "protectkick": [
+        "cc9fd8516b57fc9ae543625c8dacf7443"
+    ],
     "protectinvite": [],
     "protectjoin": [],
     "protectcancel": [],
