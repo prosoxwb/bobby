@@ -535,7 +535,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                     ret += "\n╰───「 Selfbot 」"
                     sendFooter(to,parsingRes(ret).format_map(SafeDict(key=setKey.title())))
 #================BATAS================
-    elif cmd == 'speed':
+    elif cmd == 'sp':
             debugs = debug()
             sendFooter(to,debugs)
     elif cmd == 'me':
